@@ -1,0 +1,99 @@
+<resources>
+
+    <string name="app_name">Tick-A-Train</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string name="title_activity_login">Tick-A-Train</string>
+    <string name="title_activity_main">Tick-A-Train</string>
+
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >Home</item>
+        <item >Add Schedule</item>
+        <item >Search Schedule</item>
+        <item >About US</item>
+        <item >Logout</item>
+    </string-array>
+    
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_people</item>
+        <item>@drawable/abc_ic_search_api_mtrl_alpha</item>
+        <item>@drawable/ic_communities</item>
+        <item>@android:drawable/ic_lock_lock</item>
+    </array>
+    <string name="choose">Choose your desired station</string>
+    <array name="station_1">
+        <item>Baclaran</item>
+        <item>EDSA</item>
+        <item>Libertad</item>
+        <item>Gil Puyat</item>
+        <item>Vito Cruz</item>
+        <item>Quirino</item>
+        <item>Pedro Gil</item>
+        <item>U.N. Avenue</item>
+        <item>Central</item>
+        <item>Carriedo</item>
+        <item>Doroteo Jose</item>
+        <item>Bambang</item>
+        <item>Tayuman</item>
+        <item>Blumentritt</item>
+        <item>Abad Santos</item>
+        <item>R. Papa</item>
+        <item>5th Avenue</item>
+        <item>Monumento</item>
+    </array>
+    <array name="station_2">
+        <item>C.M. Recto</item>
+        <item>Legarda</item>
+        <item>Pureza</item>
+        <item>V.Mapa</item>
+        <item>J.Ruiz </item>
+        <item>Gilmore</item>
+        <item>Betty Go Belmonte</item>
+        <item>Cubao</item>
+        <item>Anonas</item>
+        <item>Katipunan</item>
+        <item>Santolan</item>
+    </array>
+    <array name="station_3">
+        <item>Taft Avenue</item>
+        <item>Magallanes</item>
+        <item>Ayala</item>
+        <item>Buendia</item>
+        <item>Guadalupe</item>
+        <item>Boni Avenue</item>
+        <item>Shaw Boulevard</item>
+        <item>Ortigas</item>
+        <item>Santolan-Anapolis</item>
+        <item>Cubao</item>
+        <item>G.M.A. Kamuning</item>
+        <item>Quezon Avenue</item>
+        <item>North Avenue</item>
+    </array>
+
+    <style name="DefaultButtonText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#01579B</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
+    </style>
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="title_activity_add_sched">AddSched</string>
+    <string name="title_activity_create_account_dialog">CreateAccountDialog</string>
+    <string name="title_activity_show_progress_lane">ShowProgressLane</string>
+    <string name="title_activity_add_schedule">AddSchedule</string>
+
+</resources>

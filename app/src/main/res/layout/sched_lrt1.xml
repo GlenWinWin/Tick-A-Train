@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/delete"
+                android:id="@+id/buttonClose"/>
+            <DatePicker
+                android:layout_below="@+id/buttonClose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:id="@+id/datePicker"/>
+            <TimePicker
+                android:layout_below="@+id/datePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/Base.Theme.AppCompat.Light"
+                android:id="@+id/timePicker"/>
+            <TextView
+                android:layout_marginLeft="70dp"
+                android:layout_below="@+id/timePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From:"
+                android:textSize="18dp"
+                android:id="@+id/tvFrom"
+                android:textStyle="bold|italic"
+                />
+            <Spinner
+                android:layout_toRightOf="@+id/tvFrom"
+                android:layout_below="@+id/timePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/station_1"
+                android:prompt="@string/choose"
+                android:spinnerMode="dialog"
+                android:layout_marginStart="10dp"
+                android:id="@+id/spinFromStation1"
+                tools:ignore="RtlCompat" />
+            <TextView
+                android:layout_marginLeft="70dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To:"
+                android:textSize="18dp"
+                android:textStyle="bold|italic"
+                android:id="@+id/tvTo"
+                android:layout_below="@+id/tvFrom"
+                />
+            <Spinner
+                android:layout_toRightOf="@+id/tvTo"
+                android:layout_below="@+id/spinFromStation1"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/station_1"
+                android:prompt="@string/choose"
+                android:id="@+id/spinToStation1"
+                android:spinnerMode="dialog"
+                tools:ignore="RtlCompat" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/trip"
+                android:layout_below="@+id/spinToStation1"/>
+            <HorizontalScrollView
+                android:id="@+id/hs_lanes"
+                android:layout_below="@+id/trip"
+                android:layout_width="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="30dp">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                            <RadioGroup
+                                android:id="@+id/radioLanes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <RadioButton
+                                    android:background="@drawable/lrt1lane1"
+                                    android:layout_width="200dp"
+                                    android:layout_height="170dp"
+                                    android:id="@+id/Lane1"
+                                    android:checked="true"
+                                />
+                                <RadioButton
+                                    android:background="@drawable/lrt1lane2"
+                                    android:layout_width="200dp"
+                                    android:layout_height="170dp"
+                                    android:id="@+id/Lane2"
+                                    />
+                                <RadioButton
+                                    android:background="@drawable/lrt1lane3"
+                                    android:layout_width="200dp"
+                                    android:layout_height="170dp"
+                                    android:id="@+id/Lane3"
+                                    />
+                                <RadioButton
+                                    android:layout_marginTop="12dp"
+                                    android:background="@drawable/apatlrt1"
+                                    android:layout_width="224dp"
+                                    android:layout_height="155dp"
+                                    android:id="@+id/Lane4"
+                                    />
+                            </RadioGroup>
+                        <!--&lt;!&ndash;mgl = 103dp&ndash;&gt;-->
+                        <!--<TextView-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="0/150 - Book"-->
+                        <!--android:layout_below="@+id/radioLanes"-->
+                        <!--android:id="@+id/tvLane1Book"/>-->
+                        <!--&lt;!&ndash;mgl = 52dp&ndash;&gt;-->
+                        <!--<ProgressBar-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:id="@+id/progressBarBookLane1"-->
+                        <!--style="?android:attr/progressBarStyleHorizontal"-->
+                        <!--android:layout_width="wrap_content" android:layout_height="10dip"-->
+                        <!--android:indeterminateOnly="false"-->
+                        <!--android:layout_below="@+id/tvLane1Book"-->
+                        <!--android:max="150"-->
+                        <!--android:minWidth="150dp"-->
+                        <!--android:progress="0">-->
+                        <!--</ProgressBar>-->
+                        <!--&lt;!&ndash;mgl = 89dp&ndash;&gt;-->
+                        <!--<TextView-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="0/150 - Reserve"-->
+                        <!--android:layout_below="@+id/progressBarBookLane1"-->
+                        <!--android:id="@+id/tvLane1Reserve"/>-->
+                        <!--&lt;!&ndash;mgl = 52dp&ndash;&gt;-->
+                        <!--<ProgressBar-->
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:id="@+id/progressBarReserve1"-->
+                        <!--style="?android:attr/progressBarStyleHorizontal"-->
+                        <!--android:layout_width="wrap_content" android:layout_height="10dip"-->
+                        <!--android:indeterminateOnly="false"-->
+                        <!--android:layout_below="@+id/tvLane1Reserve"-->
+                        <!--android:max="150"-->
+                        <!--android:minWidth="150dp"-->
+                        <!--android:progress="0">-->
+                        <!--</ProgressBar>-->
+                        <!--&lt;!&ndash;mgl = 103dp&ndash;&gt;-->
+                        <!--<TextView-->
+                            <!--android:layout_toRightOf="@+id/tvLane1Book"-->
+                            <!--android:layout_marginLeft="107dp"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="150/150 - Book"-->
+                            <!--android:layout_below="@+id/radioLanes"-->
+                            <!--android:id="@+id/tvLane2Book"/>-->
+                        <!--&lt;!&ndash;mgl = 52dp&ndash;&gt;-->
+                        <!--<ProgressBar-->
+                            <!--android:layout_toRightOf="@+id/progressBarBookLane1"-->
+                            <!--android:layout_marginLeft="52dp"-->
+                            <!--android:id="@+id/progressBarBookLane2"-->
+                            <!--style="?android:attr/progressBarStyleHorizontal"-->
+                            <!--android:layout_width="wrap_content" android:layout_height="10dip"-->
+                            <!--android:indeterminateOnly="false"-->
+                            <!--android:layout_below="@+id/tvLane2Book"-->
+                            <!--android:max="150"-->
+                            <!--android:minWidth="150dp"-->
+                            <!--android:progress="0">-->
+                        <!--</ProgressBar>-->
+                        <!--&lt;!&ndash;mgl = 89dp&ndash;&gt;-->
+                        <!--<TextView-->
+                            <!--android:layout_toRightOf="@+id/tvLane1Reserve"-->
+                            <!--android:layout_marginLeft="92dp"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="150/150 - Reserve"-->
+                            <!--android:layout_below="@+id/progressBarBookLane2"-->
+                            <!--android:id="@+id/tvLane2Reserve"/>-->
+                        <!--&lt;!&ndash;mgl = 52dp&ndash;&gt;-->
+                        <!--<ProgressBar-->
+                            <!--android:layout_toRightOf="@+id/progressBarReserve1"-->
+                            <!--android:layout_marginLeft="52dp"-->
+                            <!--android:id="@+id/progressBarReserve2"-->
+                            <!--style="?android:attr/progressBarStyleHorizontal"-->
+                            <!--android:layout_width="wrap_content" android:layout_height="10dip"-->
+                            <!--android:indeterminateOnly="false"-->
+                            <!--android:layout_below="@+id/tvLane2Reserve"-->
+                            <!--android:max="150"-->
+                            <!--android:minWidth="150dp"-->
+                            <!--android:progress="0">-->
+                        <!--</ProgressBar>-->
+                        <!--&lt;!&ndash;mgl = 103dp&ndash;&gt;-->
+                        <!--<TextView-->
+                            <!--android:layout_toRightOf="@+id/tvLane2Book"-->
+                            <!--android:layout_marginLeft="111dp"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="150/150 - Book"-->
+                            <!--android:layout_below="@+id/radioLanes"-->
+                            <!--android:id="@+id/tvLane3Book"/>-->
+                        <!--&lt;!&ndash;mgl = 52dp&ndash;&gt;-->
+                        <!--<ProgressBar-->
+                            <!--android:layout_toRightOf="@+id/progressBarBookLane2"-->
+                            <!--android:layout_marginLeft="52dp"-->
+                            <!--android:id="@+id/progressBarBookLane3"-->
+                            <!--style="?android:attr/progressBarStyleHorizontal"-->
+                            <!--android:layout_width="wrap_content" android:layout_height="10dip"-->
+                            <!--android:indeterminateOnly="false"-->
+                            <!--android:layout_below="@+id/tvLane3Book"-->
+                            <!--android:max="150"-->
+                            <!--android:minWidth="150dp"-->
+                            <!--android:progress="0">-->
+                        <!--</ProgressBar>-->
+                        <!--&lt;!&ndash;mgl = 89dp&ndash;&gt;-->
+                        <!--<TextView-->
+                            <!--android:layout_toRightOf="@+id/tvLane2Reserve"-->
+                            <!--android:layout_marginLeft="94dp"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="150/150 - Reserve"-->
+                            <!--android:layout_below="@+id/progressBarBookLane3"-->
+                            <!--android:id="@+id/tvLane3Reserve"/>-->
+                        <!--&lt;!&ndash;mgl = 52dp&ndash;&gt;-->
+                        <!--<ProgressBar-->
+                            <!--android:layout_toRightOf="@+id/progressBarReserve2"-->
+                            <!--android:layout_marginLeft="52dp"-->
+                            <!--android:id="@+id/progressBarReserve3"-->
+                            <!--style="?android:attr/progressBarStyleHorizontal"-->
+                            <!--android:layout_width="wrap_content" android:layout_height="10dip"-->
+                            <!--android:indeterminateOnly="false"-->
+                            <!--android:layout_below="@+id/tvLane2Reserve"-->
+                            <!--android:max="150"-->
+                            <!--android:minWidth="150dp"-->
+                            <!--android:progress="0">-->
+                        <!--</ProgressBar>-->
+                        <!--<TextView-->
+                            <!--android:layout_toRightOf="@+id/tvLane3Book"-->
+                            <!--android:layout_marginLeft="141dp"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="150/150 - Book"-->
+                            <!--android:layout_below="@+id/radioLanes"-->
+                            <!--android:id="@+id/tvLane4Book"/>-->
+                        <!--&lt;!&ndash;mgl = 52dp&ndash;&gt;-->
+                        <!--<ProgressBar-->
+                            <!--android:layout_toRightOf="@+id/progressBarBookLane3"-->
+                            <!--android:layout_marginLeft="52dp"-->
+                            <!--android:id="@+id/progressBarBookLane4"-->
+                            <!--style="?android:attr/progressBarStyleHorizontal"-->
+                            <!--android:layout_width="wrap_content" android:layout_height="10dip"-->
+                            <!--android:indeterminateOnly="false"-->
+                            <!--android:layout_below="@+id/tvLane4Book"-->
+                            <!--android:max="150"-->
+                            <!--android:minWidth="150dp"-->
+                            <!--android:progress="0">-->
+                        <!--</ProgressBar>-->
+                        <!--&lt;!&ndash;mgl = 89dp&ndash;&gt;-->
+                        <!--<TextView-->
+                            <!--android:layout_toRightOf="@+id/tvLane3Reserve"-->
+                            <!--android:layout_marginLeft="124dp"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="150/150 - Reserve"-->
+                            <!--android:layout_below="@+id/progressBarBookLane4"-->
+                            <!--android:id="@+id/tvLane4Reserve"/>-->
+                        <!--&lt;!&ndash;mgl = 52dp&ndash;&gt;-->
+                        <!--<ProgressBar-->
+                            <!--android:layout_toRightOf="@+id/progressBarReserve3"-->
+                            <!--android:layout_marginLeft="52dp"-->
+                            <!--android:id="@+id/progressBarReserve4"-->
+                            <!--style="?android:attr/progressBarStyleHorizontal"-->
+                            <!--android:layout_width="wrap_content" android:layout_height="10dip"-->
+                            <!--android:indeterminateOnly="false"-->
+                            <!--android:layout_below="@+id/tvLane4Reserve"-->
+                            <!--android:max="150"-->
+                            <!--android:minWidth="150dp"-->
+                            <!--android:progress="0">-->
+                        <!--</ProgressBar>-->
+                    </RelativeLayout>
+                </RelativeLayout>
+            </HorizontalScrollView>
+            <Button
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book"
+                android:layout_below="@+id/hs_lanes"
+                android:id="@+id/btnBookSched"/>
+            <Button
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@id/btnBookSched"
+                android:layout_marginStart="142.5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reserve"
+                android:layout_below="@+id/hs_lanes"
+                android:id="@+id/btnReserveSched"
+                tools:ignore="RtlCompat" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

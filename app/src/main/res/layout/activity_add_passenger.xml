@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/etFirstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter firstname" />
+    <EditText
+        android:id="@+id/etLastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter lastname" />
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter age"
+        android:inputType="number" />
+    <EditText
+        android:id="@+id/etPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter phone number"
+        android:inputType="phone" />
+    <Button
+        android:layout_marginTop="25dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnInsert"
+        android:text="Insert"/>
+
+</LinearLayout>

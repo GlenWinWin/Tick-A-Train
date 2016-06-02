@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFF">
+    <Button
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/delete"
+        android:id="@+id/buttonClose"/>
+        <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30/150 - Book"
+        android:layout_below="@+id/buttonClose"
+
+        android:id="@+id/tvLane1Book"/>
+        <ProgressBar
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/progressBarBookLane1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content" android:layout_height="10dip"
+            android:indeterminateOnly="false"
+            android:layout_below="@+id/tvLane1Book"
+            android:max="150"
+            android:minWidth="150dp"
+            android:progress="30">
+        </ProgressBar>
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="40/150 - Reserve"
+            android:layout_below="@+id/progressBarBookLane1"
+            android:id="@+id/tvLane1Reserve"/>
+        <ProgressBar
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/progressBarReserve1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content" android:layout_height="10dip"
+            android:indeterminateOnly="false"
+            android:layout_below="@+id/tvLane1Reserve"
+            android:max="150"
+            android:minWidth="150dp"
+            android:progress="40">
+        </ProgressBar>
+</RelativeLayout>
